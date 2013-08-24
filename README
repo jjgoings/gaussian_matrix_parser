@@ -1,0 +1,12 @@
+Gaussian Matrix Parser (gauss_parse)
+
+Joshua J Goings, jjgoings@uw.edu, (2013)
+
+Gaussian Matrix Parser is a command line routine to extract matrices from Gaussian .log files and write them to text files as a 2D array. This may be desirable if you want to use these matrices for your own 'home-grown' quantum chemistry methods, or for debugging purposes elsewhere.
+
+gauss_parse takes the .log file as an argument, and then creates a directory with (named after the logfile), and fills it with the matrices you want.
+
+For example:
+	>>$ python gauss_parse.py my_molecule.log
+
+Would create a folder in the same directory called 'my_molecule', containing various '.dat' files. If the overlap matrix, was in the log file, it would write 'overlap.dat' in that folder.
