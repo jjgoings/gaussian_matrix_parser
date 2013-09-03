@@ -185,13 +185,13 @@ logfile.close()
 '''       
 
 if get_overlap == True:
-    np.savetxt(fileName + '/overlap.dat',overlap,delimiter = ' ')
+    np.savetxt(fileName + '/overlap.dat',overlap,fmt='%.8e',delimiter = ' ')
 if get_KE == True:
-    np.savetxt(fileName + '/kinetic_energy.dat',KE,delimiter = ' ')
+    np.savetxt(fileName + '/kinetic_energy.dat',KE,fmt='%.8e',delimiter = ' ')
 if get_PE == True:
-    np.savetxt(fileName + '/potential_energy.dat',PE,delimiter = ' ')
+    np.savetxt(fileName + '/potential_energy.dat',PE,fmt='%.8e',delimiter = ' ')
 if get_ERI == True:
-    np.savetxt(fileName + '/two_electron_ints.dat',ERI,fmt='%d %d %d %d %.12f',delimiter = ' ')
-np.savetxt(fileName + '/nuclear_repulsion.dat',np.array([enuc]),fmt='%.12f')
+    np.savetxt(fileName + '/two_electron_ints.dat',ERI,fmt='%d %d %d %d %.8f',delimiter = ' ')
+np.savetxt(fileName + '/nuclear_repulsion.dat',np.array([enuc]),fmt='%.8f')
 np.savetxt(fileName + '/number_basis_functions.dat',np.array([nbf]),fmt='%d')
 np.savetxt(fileName + '/number_electrons.dat',np.array([nelec]),fmt='%d')
